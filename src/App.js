@@ -1,9 +1,8 @@
 import React from 'react';
 
 import './styles/global';
+import Sidebar from './components/Sidebar';
 
-const App = () => (
-  <h1>Hello World</h1>
-);
+const App = () => <Sidebar />;
 
 export default App;

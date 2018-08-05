@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+// Estilizar um component styled dentro de outro
+import { Spinner } from '../Loading/styles';
+
 export const Container = styled.aside`
   height: 100%;
   width: 200px;
@@ -26,12 +29,16 @@ export const Nav = styled.ul`
   }
 
   li {
+
+    display: flex;
+    align-items: center;
+
     a {
       color: inherit;
       text-decoration: none;
       font-size: 13px;
       line-height: 32px;
-      font-weight: ${props => (props.main ? 'bold' : 'normal')}
+      font-weight: ${props => (props.main ? 'bold' : 'normal')};
 
       &:hover {
         color: #FFF;
@@ -43,6 +50,11 @@ export const Nav = styled.ul`
       text-transform: uppercase;
       letter-spacing: 1.11px;
       font-weight: 300;
+    }
+
+    ${Spinner} {
+      height: 15px;
+      margin-left: 15px;
     }
 
   }
